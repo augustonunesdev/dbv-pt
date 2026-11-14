@@ -158,10 +158,39 @@ def slides_for(post):
     return out
 
 
-def render(html_path, png_path):
+STORY_CSS = """
+html, body { height: 1920px; }
+.story { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; padding: 150px 80px 0; text-align: center; }
+.story .kicker { font-size: 34px; }
+.story h2 { font-size: 84px; margin: 14px 0 50px; }
+.story .card { width: 760px; border-radius: 34px; box-shadow: 0 30px 70px rgba(20,86,96,.28); transform: rotate(-2deg); }
+.story .tap { margin-top: 70px; font-size: 44px; font-weight: 700; color: #12333a; line-height: 1.3; }
+.story .sticker { margin-top: 34px; width: 640px; height: 130px; border: 4px dashed #f46e2c; border-radius: 30px;
+  display: grid; place-items: center; font-size: 30px; font-weight: 600; color: #c9551c; }
+"""
+CLUB_PATHS = {"REBENTOS": "rebentos", "TICOES": "ticoes"}
+
+
+def wiki_url(data):
+    club = CLUB_PATHS.get(data.get("clubGroup"), "exploradores")
+    return f"{WIKI}/clubes/{club}/wiki/{data['slug']}"
+
+
+def story_for(post, cover_png):
+    """Story 1080x1920 a anunciar o post; o espaço livre em baixo é para o sticker de link (posto na app)."""
+    return (f'<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><style>{CSS}{STORY_CSS}</style></head>'
+            f'<body><div class="story">'
+            f'<div class="kicker">Especialidade da semana</div>'
+            f'<h2>Novo post!</h2>'
+            f'<img class="card" src="{cover_png.as_uri()}" alt="" />'
+            f'<div class="tap">Requisitos completos e dicas<br>na DBV Wiki 👇</div>'
+            f'</div></body></html>')
+
+
+def render(html_path, png_path, height=1350):
     subprocess.run([
         str(CHROME), "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1",
-        "--window-size=1080,1350", "--virtual-time-budget=6000", "--allow-file-access-from-files",
+        f"--window-size=1080,{height}", "--virtual-time-budget=6000", "--allow-file-access-from-files",
         f"--screenshot={png_path}", html_path.as_uri(),
     ], check=True, capture_output=True)
 
@@ -178,7 +207,12 @@ def main():
             html_path.write_text(content, encoding="utf-8")
             render(html_path, folder / f"{i}.png")
         (folder / "legenda.txt").write_text(post["legenda"] + "\n\n" + post["hashtags"] + "\n", encoding="utf-8")
-        print(f"{folder.name}: {len(list(folder.glob('*.png')))} slides")
+        data, _ = fonte(post["slug"])
+        story_html = folder / "html" / "story.html"
+        story_html.write_text(story_for(post, folder / "1.png"), encoding="utf-8")
+        render(story_html, folder / "story.png", height=1920)
+        (folder / "story-link.txt").write_text(wiki_url(data) + "\n", encoding="utf-8")
+        print(f"{folder.name}: {len(list(folder.glob('[0-9]*.png')))} slides + story")
 
 
 if __name__ == "__main__":

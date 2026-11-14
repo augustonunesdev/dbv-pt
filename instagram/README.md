@@ -13,31 +13,42 @@ DBV Forge 🔥 | Desbravadores Portugal
 ```
 Link: `https://dbv.pt`
 
-## Calendário — primeiras 4 semanas (a partir de 17/11/2026)
+## Calendário — primeiras 4 semanas
 
-Ritmo: **carrossel à terça e sexta** (Especialidade da semana) + **Reel do Forge à quinta** + stories
-quase todos os dias. Melhor hora para publicar: 19h–21h, quando líderes e Desbravadores estão em casa.
+Ritmo: **carrossel à terça e ao domingo** (Especialidade da semana) + **Reel do Forge à quinta** +
+stories quase todos os dias. Hora: **20h–21h**, quando líderes e Desbravadores estão em casa.
+
+**Sábado:** o público é adventista e muita gente não usa redes sociais do pôr do sol de sexta ao pôr
+do sol de sábado. Não publicar nesse período (nem à sexta à noite); o domingo à noite rende mais.
 
 | Data | Formato | Conteúdo | Ficheiros |
 |---|---|---|---|
-| ~~Ter 17/11~~ Sáb 14/11 ✅ | Carrossel | Acampamento de Inverno (publicado) | `carrosseis/01-acampamento-de-inverno/` |
+| Sáb 14/11 ✅ | Carrossel | Acampamento de Inverno (publicado) | `carrosseis/01-acampamento-de-inverno/` |
+| Dom 15/11 20h | Story | Story do Acampamento de Inverno com link para a wiki | `01-.../story.png` + `story-link.txt` |
 | Qui 19/11 | Reel | Forge: timelapse de uma impressão (porta-chaves ou logótipo) | precisa de vídeo teu |
-| Sex 20/11 | Carrossel | Nós | `carrosseis/02-nos/` |
-| Ter 24/11 | Carrossel | Astronomia | `carrosseis/03-astronomia/` |
+| Dom 22/11 | Carrossel + story | Nós | `carrosseis/02-nos/` |
+| Ter 24/11 | Carrossel + story | Astronomia | `carrosseis/03-astronomia/` |
 | Qui 26/11 | Reel | Forge: "da ideia à peça" (modelo no ecrã → impressão → peça na mão) | precisa de vídeo teu |
-| Sex 27/11 | Carrossel | Orientação | `carrosseis/04-orientacao/` |
-| Ter 01/12 | Carrossel | próxima especialidade (gerar com `gerar.py`) | — |
+| Dom 29/11 | Carrossel + story | Orientação | `carrosseis/04-orientacao/` |
+| Ter 01/12 | Carrossel + story | próxima especialidade (gerar com `gerar.py`) | — |
 | Qui 03/12 | Reel | Forge: peça de Natal para o clube | precisa de vídeo teu |
 
-Cada pasta tem os slides `1.png` a `5.png` e a `legenda.txt` (legenda + hashtags) pronta a colar.
+Cada pasta tem os slides `1.png` a `5.png`, a `legenda.txt` (legenda + hashtags), o `story.png` e o
+`story-link.txt` com o endereço da especialidade na wiki.
 
-## Stories (fáceis, quase diários)
+## Stories
 
-- No dia de cada carrossel: partilha o post nos stories com o **sticker de link** para a página da
-  especialidade na wiki (ex.: `https://wiki.dbv.pt/clubes/exploradores/wiki/nos`).
-- Sondagem: "Já tens esta especialidade? Sim / A fazer / Ainda não".
-- Bastidores da impressora (10 s de vídeo a imprimir já chegam).
-- Destaques fixos no perfil: **Wiki**, **Forge**, **Encomendas**.
+Story do carrossel (só pela app, porque o sticker de link não existe no computador):
+1. Novo story → escolhe o `story.png` da galeria.
+2. Sticker → **Link** → cola o endereço do `story-link.txt` → texto do botão: "Ver na Wiki".
+3. Põe o sticker no espaço livre por baixo de "Requisitos completos e dicas na DBV Wiki 👇".
+4. Opcional: sticker de **sondagem** "Já tens esta especialidade?" (Sim / A fazer / Ainda não).
+
+Outros stories fáceis: bastidores da impressora (10 s a imprimir já chegam) e destaques fixos no
+perfil: **Wiki**, **Forge**, **Encomendas**.
+
+Agendar: o Instagram só agenda stories pelo Meta Business Suite, com conta profissional ligada a
+uma página do Facebook. Por agora publica-se à mão.
 
 ## Crescer
 
