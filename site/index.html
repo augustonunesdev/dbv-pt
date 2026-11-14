@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DBV · Tudo para Desbravadores, num só lugar</title>
+  <meta name="description" content="A casa dos projetos DBV: a DBV Wiki com especialidades, classes e história dos Desbravadores em Portugal, e a DBV Forge, impressão 3D para clubes." />
+  <link rel="canonical" href="https://dbv.pt/" />
+  <meta property="og:site_name" content="DBV" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DBV · Tudo para Desbravadores, num só lugar" />
+  <meta property="og:description" content="DBV Wiki, DBV Forge (impressão 3D) e os próximos apps e jogos para Desbravadores." />
+  <meta property="og:url" content="https://dbv.pt/" />
+  <meta name="theme-color" content="#145660" />
+  <link rel="icon" href="/assets/logo-dbv-forge.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --bg: #fbf8f4;
+      --bg-soft: #f3eee7;
+      --card: #ffffff;
+      --card-hover: #ffffff;
+      --line: #e6ddd2;
+      --text: #12333a;
+      --muted: #5d6b6e;
+      --flame: #f46e2c;
+      --flame-soft: #c9551c;
+      --teal: #145660;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 520px at 50% -220px, rgba(244, 110, 46, .16), transparent 70%),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+    header { text-align: center; padding: 56px 0 28px; }
+    .mark { width: 120px; height: auto; margin: 0 auto 22px; display: block; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: 0 0 10px; letter-spacing: -.02em; }
+    h1 span { color: var(--flame); }
+    h1 { color: var(--teal); }
+    .lead { color: var(--muted); font-size: 1.1rem; margin: 0 auto; max-width: 34em; }
+    .social { display: flex; gap: 10px; justify-content: center; margin-top: 22px; flex-wrap: wrap; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line);
+      background: var(--bg-soft); text-decoration: none; font-weight: 600; font-size: .95rem;
+    }
+    .pill:hover { border-color: var(--flame); }
+    .pill svg { width: 18px; height: 18px; }
+
+    h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 44px 0 14px; font-weight: 700; }
+
+    .main-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .main-grid { grid-template-columns: 1fr 1fr; } }
+    .card {
+      display: flex; flex-direction: column; gap: 12px;
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 24px; text-decoration: none; transition: background .15s, border-color .15s, transform .15s;
+    }
+    a.card:hover { border-color: var(--flame); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(20, 86, 96, .10); }
+    .card { box-shadow: 0 2px 10px rgba(20, 86, 96, .05); }
+    .card .icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 26px; }
+    .card.wiki .icon { background: rgba(20, 86, 96, .10); }
+    .card.forge .icon { background: rgba(244, 110, 46, .12); }
+    .card.forge .icon img { width: 34px; height: 34px; }
+    .card h3 { margin: 0; font-size: 1.4rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .card ul { margin: 0; padding-left: 1.1em; color: var(--muted); }
+    .card ul li { margin: 2px 0; }
+    .cta {
+      margin-top: auto; align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 18px; border-radius: 12px; font-weight: 700;
+    }
+    .card.wiki .cta { background: var(--teal); color: #fff; }
+    .card.forge .cta { background: var(--flame); color: #fff; }
+    .note { font-size: .9rem; color: var(--muted); }
+
+    .soon-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .soon-grid { grid-template-columns: repeat(3, 1fr); } }
+    .soon {
+      background: var(--bg-soft); border: 1px dashed var(--line); border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+    .soon .tag {
+      display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--flame-soft); background: rgba(244, 110, 46, .12); border-radius: 6px; padding: 3px 8px; margin-bottom: 8px;
+    }
+    .soon h3 { margin: 0 0 4px; font-size: 1.1rem; }
+    .soon p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .soon-foot { margin-top: 14px; color: var(--muted); font-size: .95rem; }
+    .soon-foot a { color: var(--flame-soft); font-weight: 700; }
+
+    .top { display: grid; gap: 10px; grid-template-columns: 1fr; }
+    @media (min-width: 560px) { .top { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 860px) { .top { grid-template-columns: repeat(3, 1fr); } }
+    .top a {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px;
+    }
+    .top a:hover { border-color: var(--teal); }
+    .top img { width: 44px; height: 44px; object-fit: contain; flex: none; }
+    .top strong { display: block; line-height: 1.25; }
+    .top small { color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: .9rem; text-align: center; }
+    footer a { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="mark" src="/assets/marca-dbv-forge.svg" alt="DBV Forge" width="120" height="197" />
+      <h1>Tudo para <span>Desbravadores</span>,<br />num só lugar.</h1>
+      <p class="lead">Conteúdo, ferramentas e peças feitas à mão para clubes de Desbravadores em Portugal.</p>
+      <div class="social">
+        <a class="pill" href="https://www.instagram.com/dbv.forge/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @dbv.forge
+        </a>
+        <a class="pill" href="https://wa.me/351965215930" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <h2>Projetos</h2>
+    <div class="main-grid">
+      <a class="card wiki" href="https://wiki.dbv.pt/">
+        <div class="icon" aria-hidden="true">📖</div>
+        <h3>DBV Wiki</h3>
+        <p>A enciclopédia aberta dos Desbravadores em Portugal.</p>
+        <ul>
+          <li>Requisitos de mais de 500 especialidades, com guia prático</li>
+          <li>Classes progressivas de Rebentos, Tições e Exploradores</li>
+          <li>História, eventos e calendário</li>
+        </ul>
+        <span class="cta">Abrir a Wiki →</span>
+      </a>
+
+      <a class="card forge" href="https://wa.me/351965215930?text=Ol%C3%A1!%20Vim%20do%20dbv.pt%20e%20quero%20saber%20mais%20sobre%20a%20impress%C3%A3o%203D." target="_blank" rel="noopener">
+        <div class="icon" aria-hidden="true"><img src="/assets/logo-dbv-forge.svg" alt="" /></div>
+        <h3>DBV Forge</h3>
+        <p>Impressão 3D feita para aventura.</p>
+        <ul>
+          <li>Porta-chaves e lembranças para o clube</li>
+          <li>Troféus e prémios para eventos e camporís</li>
+          <li>Peças úteis para acampamento e atividades</li>
+        </ul>
+        <p class="note">Por agora, só entregamos na nossa região. Pergunta no WhatsApp se chegamos até ti.</p>
+        <span class="cta">Pedir orçamento →</span>
+      </a>
+    </div>
+
+    <h2>A caminho</h2>
+    <div class="soon-grid">
+      <div class="soon">
+        <span class="tag">Em ideia</span>
+        <h3>Missões DBV</h3>
+        <p>Uma app que transforma hábitos, requisitos e desafios do clube num jogo com níveis e recompensas.</p>
+      </div>
+      <div class="soon">
+        <span class="tag">Em ideia</span>
+        <h3>Registo Virtual</h3>
+        <p>Um registo digital das classes progressivas e especialidades conquistadas por cada Desbravador.</p>
+      </div>
+      <div class="soon">
+        <span class="tag">Em ideia</span>
+        <h3>Jogos</h3>
+        <p>Jogos para aprender e praticar o que se aprende no clube, sozinho ou em unidade.</p>
+      </div>
+    </div>
+    <p class="soon-foot">Queres saber quando sai? <a href="https://www.instagram.com/dbv.forge/" target="_blank" rel="noopener">Segue a @dbv.forge</a>.</p>
+
+    <section id="top-section" hidden>
+      <h2>Mais vistas na Wiki esta semana</h2>
+      <div class="top" id="top"></div>
+    </section>
+
+    <footer>
+      <p>Projeto independente, feito por Desbravadores para Desbravadores. Não é um site oficial.</p>
+      <p><a href="mailto:dbvwiki@gmail.com">dbvwiki@gmail.com</a> · <a href="https://www.instagram.com/dbv.forge/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wiki.dbv.pt/">Wiki</a></p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var WIKI = 'https://wiki.dbv.pt';
+      var CLUBS = { REBENTOS: 'rebentos', TICOES: 'ticoes' };
+      function clubSlug(group) { return CLUBS[group] || 'exploradores'; }
+      function el(tag, attrs, text) {
+        var node = document.createElement(tag);
+        for (var key in attrs) node.setAttribute(key, attrs[key]);
+        if (text) node.textContent = text;
+        return node;
+      }
+      fetch(WIKI + '/api/articles/top?period=week')
+        .then(function (res) { return res.ok ? res.json() : []; })
+        .then(function (items) {
+          items = (items || []).filter(function (a) { return a.categoryType === 'ESPECIALIDADES'; }).slice(0, 6);
+          if (!items.length) return;
+          var list = document.getElementById('top');
+          items.forEach(function (a) {
+            var link = el('a', { href: WIKI + '/clubes/' + clubSlug(a.clubGroup) + '/wiki/' + a.slug });
+            if (a.imageUrl) {
+              link.appendChild(el('img', { src: WIKI + a.imageUrl, alt: '', loading: 'lazy', width: '44', height: '44' }));
+            }
+            var text = el('span', {});
+            text.appendChild(el('strong', {}, a.title));
+            text.appendChild(el('small', {}, a.categoryName || 'Especialidade'));
+            link.appendChild(text);
+            list.appendChild(link);
+          });
+          document.getElementById('top-section').hidden = false;
+        })
+        .catch(function () { /* a secção fica escondida se a Wiki não responder */ });
+    })();
+  </script>
+</body>
+</html>
