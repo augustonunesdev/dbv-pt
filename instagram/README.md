@@ -20,7 +20,7 @@ quase todos os dias. Melhor hora para publicar: 19h–21h, quando líderes e Des
 
 | Data | Formato | Conteúdo | Ficheiros |
 |---|---|---|---|
-| Ter 17/11 | Carrossel | Acampamento de Inverno | `carrosseis/01-acampamento-de-inverno/` |
+| ~~Ter 17/11~~ Sáb 14/11 ✅ | Carrossel | Acampamento de Inverno (publicado) | `carrosseis/01-acampamento-de-inverno/` |
 | Qui 19/11 | Reel | Forge: timelapse de uma impressão (porta-chaves ou logótipo) | precisa de vídeo teu |
 | Sex 20/11 | Carrossel | Nós | `carrosseis/02-nos/` |
 | Ter 24/11 | Carrossel | Astronomia | `carrosseis/03-astronomia/` |
