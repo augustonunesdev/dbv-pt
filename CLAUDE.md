@@ -51,6 +51,11 @@ build, CSS dentro do `index.html`) e o material do Instagram @dbv.forge (`instag
 
 ## Marca
 
-- DBV Forge: azul-petróleo `#145660` + laranja `#f46e2c`. Logótipos em `site/assets/`
-  (`logo-dbv-forge.svg` sem nome, `marca-dbv-forge.svg` com nome).
+- Todos os projetos usam azul-petróleo `#145660` + laranja `#f46e2c`. Logótipos em `site/assets/`:
+  `logo-*.svg` só ícone (`-claro` para fundos escuros), `marca-*.svg` com nome (vertical) e
+  `marca-*-horizontal.svg`, para `dbv-pt`, `dbv-wiki` e `dbv-forge`.
+- dbv.pt = escudo português com o triângulo vazado dos Desbravadores; Wiki = livro aberto com o
+  triângulo; Forge = a forja em D com a chama (a versão antiga com detalhes laterais foi descartada).
+- Texto das marcas em Montserrat (800 em "DBV"/"dbv.pt", 500 no nome), convertido em paths (ícones
+  desenhados numa grelha de 200x200, fáceis de editar à mão).
 - Contacto público: `dbvwiki@gmail.com`; Instagram `@dbv.forge`.
