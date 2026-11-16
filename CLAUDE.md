@@ -20,6 +20,7 @@ build, CSS dentro do `index.html`) e o material do Instagram @dbv.forge (`instag
 - Conversa com o autor: **português do Brasil**.
 - Tudo o que é publicado (site, posts, legendas): **português de Portugal** ("telemóvel", "ecrã",
   "tu" em vez de "você", etc.).
+- Vocabulário dos Desbravadores em Portugal: o grupo dentro do clube é a **patrulha** (nunca "unidade").
 
 ## Publicação e produção
 

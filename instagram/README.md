@@ -24,12 +24,12 @@ do sol de sábado. Não publicar nesse período (nem à sexta à noite); o domin
 | Data | Formato | Conteúdo | Ficheiros |
 |---|---|---|---|
 | Sáb 14/11 ✅ | Carrossel | Acampamento de Inverno (publicado) | `carrosseis/01-acampamento-de-inverno/` |
-| Dom 15/11 20h | Story | Story do Acampamento de Inverno com link para a wiki | `01-.../story.png` + `story-link.txt` |
+| Ter 17/11 20h | Carrossel + story | Nós | `carrosseis/02-nos/` |
 | Qui 19/11 | Reel | Forge: timelapse de uma impressão (porta-chaves ou logótipo) | precisa de vídeo teu |
-| Dom 22/11 | Carrossel + story | Nós | `carrosseis/02-nos/` |
-| Ter 24/11 | Carrossel + story | Astronomia | `carrosseis/03-astronomia/` |
+| Dom 22/11 | Carrossel + story | Astronomia | `carrosseis/03-astronomia/` |
+| Ter 24/11 | Carrossel + story | Orientação | `carrosseis/04-orientacao/` |
 | Qui 26/11 | Reel | Forge: "da ideia à peça" (modelo no ecrã → impressão → peça na mão) | precisa de vídeo teu |
-| Dom 29/11 | Carrossel + story | Orientação | `carrosseis/04-orientacao/` |
+| Dom 29/11 | Carrossel + story | próxima especialidade (gerar com `gerar.py`) | — |
 | Ter 01/12 | Carrossel + story | próxima especialidade (gerar com `gerar.py`) | — |
 | Qui 03/12 | Reel | Forge: peça de Natal para o clube | precisa de vídeo teu |
 

@@ -20,7 +20,9 @@ from posts import POSTS  # noqa: E402
 WIKI = "https://wiki.dbv.pt"
 FONTE = ROOT / "_fonte"
 SAIDA = ROOT / "carrosseis"
-LOGO = ROOT.parent / "site" / "assets" / "logo-dbv-forge.svg"
+ASSETS = ROOT.parent / "site" / "assets"
+LOGO = ASSETS / "logo-dbv-pt.svg"          # rodapé: escudo + "dbv.pt", o endereço para onde mandamos
+MARCA_FINAL = ASSETS / "marca-dbv-wiki.svg"  # slide final: o conteúdo vem da DBV Wiki
 CHROME = next((p for p in [
     Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
     Path(r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"),
@@ -149,11 +151,11 @@ def slides_for(post):
         out.append(page(f'<div class="kicker">{inline(post["titulo"])}</div>' + body(kind, title, items)
                         + footer(i, total)))
     out.append(page(
-        f'<img class="logo" src="{(ROOT.parent / "site" / "assets" / "marca-dbv-forge.svg").as_uri()}" alt="" />'
+        f'<img class="logo" src="{MARCA_FINAL.as_uri()}" alt="" />'
         f'<h2>Requisitos completos e mais dicas</h2>'
         f'<div class="url">dbv.pt</div>'
         f'<div class="sub">Link na bio · DBV Wiki</div>'
-        f'<div class="actions"><span>💾 Guarda</span><span>📤 Partilha com a unidade</span></div>'
+        f'<div class="actions"><span>💾 Guarda</span><span>📤 Partilha com a patrulha</span></div>'
         + footer(total, total), "end"))
     return out
 

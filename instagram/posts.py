@@ -42,7 +42,7 @@ POSTS = [
             "Desliza para veres o sistema das três camadas e as regras de segurança que todo o Desbravador "
             "devia saber antes de acampar na neve.\n\n"
             "📖 Requisitos completos e mais dicas em dbv.pt (link na bio).\n"
-            "💾 Guarda para o próximo acampamento e partilha com a tua unidade."
+            "💾 Guarda para o próximo acampamento e partilha com a tua patrulha."
         ),
         "hashtags": "#desbravadores #desbravadoresportugal #especialidades #acampamento #campismo "
                     "#serradaestrela #inverno #aventura #pathfinders #dbv",
@@ -146,7 +146,7 @@ POSTS = [
             "em todo o país. Desliza para aprenderes as palavras-chave e a tirar um azimute em 3 passos.\n\n"
             "📍 Dica: muitos parques e escolas têm percursos permanentes de orientação — ótimos para treinar.\n\n"
             "📖 Requisitos completos e mais dicas em dbv.pt (link na bio).\n"
-            "👥 Marca quem é o melhor orientador da tua unidade."
+            "👥 Marca quem é o melhor orientador da tua patrulha."
         ),
         "hashtags": "#desbravadores #desbravadoresportugal #especialidades #orientacao #bussola "
                     "#mapa #caminhada #aventura #pathfinders #dbv",
